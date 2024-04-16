@@ -38,6 +38,7 @@ class Colors:
         """
         hexs = (
             "FF3838",
+            "00D4BB",
             "FF9D97",
             "FF701F",
             "FFB21D",
@@ -46,7 +47,6 @@ class Colors:
             "92CC17",
             "3DDB86",
             "1A9334",
-            "00D4BB",
             "2C99A8",
             "00C2FF",
             "344593",
@@ -203,9 +203,6 @@ def plot_images(images, targets, paths=None, fname="images.jpg", names=None):
                 cls = classes[j]
                 color = colors(cls)
                 cls = names[cls] if names else cls
-                if labels or conf[j] > 0.25:  # 0.25 conf thresh
-                    label = f"{cls}" if labels else f"{cls} {conf[j]:.1f}"
-                    annotator.box_label(box, label, color=color)
     annotator.im.save(fname)  # save
 
 

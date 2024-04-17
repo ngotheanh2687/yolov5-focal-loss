@@ -641,7 +641,7 @@ def main(opt, callbacks=Callbacks()):
             "iou_t": (False, 0.1, 0.7),  # IoU training threshold
             "anchor_t": (False, 2.0, 8.0),  # anchor-multiple threshold
             "anchors": (False, 2.0, 10.0),  # anchors per output grid (0 to ignore)
-            "fl_gamma": (True, 0.25, 2.0),  # focal loss gamma (efficientDet default gamma=1.5)
+            "fl_gamma": (True, 2.0, 0.9),  # focal loss gamma (efficientDet default gamma=1.5)
             "hsv_h": (True, 0.0, 0.1),  # image HSV-Hue augmentation (fraction)
             "hsv_s": (True, 0.0, 0.9),  # image HSV-Saturation augmentation (fraction)
             "hsv_v": (True, 0.0, 0.9),  # image HSV-Value augmentation (fraction)

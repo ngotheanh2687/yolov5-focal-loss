@@ -203,6 +203,7 @@ def plot_images(images, targets, paths=None, fname="images.jpg", names=None):
                 cls = classes[j]
                 color = colors(cls)
                 cls = names[cls] if names else cls
+                annotator.box_label(box, label = None, color=color)            
     annotator.im.save(fname)  # save
 
 

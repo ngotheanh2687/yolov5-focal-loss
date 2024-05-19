@@ -626,10 +626,10 @@ def main(opt, callbacks=Callbacks()):
     else:
         # Hyperparameter evolution metadata (including this hyperparameter True-False, lower_limit, upper_limit)
         meta = {
-            "lr0": (False, 1e-5, 1e-1),  # initial learning rate (SGD=1E-2, Adam=1E-3)
+            "lr0": (True, 0.01, 0.02),  # initial learning rate (SGD=1E-2, Adam=1E-3)
             "lrf": (False, 0.01, 1.0),  # final OneCycleLR learning rate (lr0 * lrf)
-            "momentum": (False, 0.6, 0.98),  # SGD momentum/Adam beta1
-            "weight_decay": (False, 0.0, 0.001),  # optimizer weight decay
+            "momentum": (True, 0.9, 0.98),  # SGD momentum/Adam beta1
+            "weight_decay": (True, 0.0005, 0.001),  # optimizer weight decay
             "warmup_epochs": (False, 0.0, 5.0),  # warmup epochs (fractions ok)
             "warmup_momentum": (False, 0.0, 0.95),  # warmup initial momentum
             "warmup_bias_lr": (False, 0.0, 0.2),  # warmup initial bias lr
@@ -641,7 +641,7 @@ def main(opt, callbacks=Callbacks()):
             "iou_t": (False, 0.1, 0.7),  # IoU training threshold
             "anchor_t": (False, 2.0, 8.0),  # anchor-multiple threshold
             "anchors": (False, 2.0, 10.0),  # anchors per output grid (0 to ignore)
-            "fl_gamma": (False, 2.0, 0.5),  # focal loss gamma (efficientDet default gamma=1.5)
+            "fl_gamma": (True, 2.0, 0.5),  # focal loss gamma (efficientDet default gamma=1.5)
             "hsv_h": (True, 0.0, 0.1),  # image HSV-Hue augmentation (fraction)
             "hsv_s": (True, 0.0, 0.9),  # image HSV-Saturation augmentation (fraction)
             "hsv_v": (True, 0.0, 0.9),  # image HSV-Value augmentation (fraction)
